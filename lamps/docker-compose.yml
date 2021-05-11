@@ -5,8 +5,8 @@ services:
       depends_on:
         - "mysqldb"
       ports:
-        - 80:80
-        - 443:443
+        - ${PHP_HTTP_PORT}:80
+        - ${PHP_HTTPS_PORT}:443
       volumes:
         - ./word-press/:/var/www/html
       environment:
@@ -22,7 +22,7 @@ services:
         - "mysqldb"
       restart: always
       ports:
-          - 8080:80
+          - ${PHP_MY_ADMIN_PORT}:80
       environment:
         MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
         MYSQL_USER: ${USER_NAME}
@@ -37,7 +37,7 @@ services:
         - "mysqldb"
       restart: always
       ports:
-        - 8000:80
+        - ${WORDPRESS_PORT}:80
       environment:
         WORDPRESS_DB_HOST: database
         WORDPRESS_DB_USER: root

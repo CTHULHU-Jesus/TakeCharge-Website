@@ -8,7 +8,7 @@
   The website is marketing toward schools and students.
 
 ## Installation instructions
-  Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/).
+  Install [make](https://www.gnu.org/software/make/), [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/).
   This website may not run on all architectures (depends on what the docker images run on), This needs more research.
 ## Operating instructions
 
@@ -20,8 +20,8 @@ $ make up
 By default the containers opened are:
 | container  | url                                                         |
 | ---------- | ----------------------------------------------------------- |
-| php-apache | [localhost:80](http://localhost:80)                         |
-| wordpress  | [localhost:8000/wp-admin/](http://localhost:8000/wp-admin/) |
+<!-- | php-apache | [localhost:80](http://localhost:80)                         | -->
+| wordpress  | [localhost:8000/wp-admin/](http://localhost:80/wp-admin/) |
 | phpMyAdmin | [localhost:8080](http://localhost:8080)                     |
 | mySql      | `use phpMyAdmin for web access`                             |
 
@@ -60,14 +60,19 @@ None yet!!
 
 ## Credits and acknowledgements
 
-| Person              | Contribution                                       | 
-|:-------------------:|:--------------------------------------------------:|
-| Matthew I. Bartlett | Main developer                                     |
+| Person              | Contribution   | 
+|:-------------------:|:--------------:|
+| Matthew I. Bartlett | Main Developer |
+| Alli Singer         | Main Designer  |
+<!-- | Keven Clark         | Manager        | -->
 
-| Software         | Use                                                | Licence     |
-|:----------------:|:--------------------------------------------------:|:-----------:|
-| Docker           | Create containers that run code                    | Apache v2.0 |
-| phpMyAdmin image | [docker file](https://hub.docker.com/_/phpmyadmin) | GPL3        |
-| php-apache image | [docker file](https://hub.docker.com/_/php)        | [Custom](https://www.php.net/license/) |
-| Wordpress image  | [docker file](https://hub.docker.com/_/wordpress)  | @TODO       |
-| MySql image      | [docker file](https://hub.docker.com/_/mysql)      | [Custom](https://www.mysql.com/about/legal/) |
+| Software         | Use                                                      | Licence     |
+| ---------------- | -------------------------------------------------------- | ----------- |
+| Docker           | Create containers that run code                          | Apache v2.0 |
+| phpMyAdmin image | [docker file](https://hub.docker.com/_/phpmyadmin)       | GPL3        |
+<!-- | php-apache image | [docker file](https://hub.docker.com/_/php)              | [Custom](https://www.php.net/license/) | -->
+| Wordpress image  | [docker file](https://hub.docker.com/_/wordpress)        | @TODO       |
+| MySql image      | [docker file](https://hub.docker.com/_/mysql)            | [Custom](https://www.mysql.com/about/legal/) |
+| GNU make         | [make file support ](https://www.gnu.org/software/make/) | GPL3        |
+| PHP              | PHP language support                                     | [Custom](https://en.wikipedia.org/wiki/PHP_License) |
+@TODO compleate the rest of this table for js css and scss

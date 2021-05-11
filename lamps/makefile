@@ -13,7 +13,7 @@ down:
 	docker-compose --env-file env down 
 
 wordpress:
-	xdg-open http://localhost:8000/wp-admin/
+	xdg-open http://localhost:80/wp-admin/
 
 # -- USE PHP MY ADMIN TO BACK UP DATABASE --
 #

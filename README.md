@@ -20,10 +20,10 @@ $ make up
 By default the containers opened are:
 | container  | url                                                         |
 | ---------- | ----------------------------------------------------------- |
-<!-- | php-apache | [localhost:80](http://localhost:80)                         | -->
-| wordpress  | [localhost:8000/wp-admin/](http://localhost:80/wp-admin/) |
+| wordpress  | [localhost:8000/wp-admin/](http://localhost:80/wp-admin/)   |
 | phpMyAdmin | [localhost:8080](http://localhost:8080)                     |
 | mySql      | `use phpMyAdmin for web access`                             |
+<!-- | php-apache | [localhost:80](http://localhost:80)                         | -->
 
 	xdg-open http://localhost:8000/wp-admin/
 
@@ -70,7 +70,6 @@ None yet!!
 | ---------------- | -------------------------------------------------------- | ----------- |
 | Docker           | Create containers that run code                          | Apache v2.0 |
 | phpMyAdmin image | [docker file](https://hub.docker.com/_/phpmyadmin)       | GPL3        |
-<!-- | php-apache image | [docker file](https://hub.docker.com/_/php)              | [Custom](https://www.php.net/license/) | -->
 | Wordpress image  | [docker file](https://hub.docker.com/_/wordpress)        | @TODO       |
 | MySql image      | [docker file](https://hub.docker.com/_/mysql)            | [Custom](https://www.mysql.com/about/legal/) |
 | GNU make         | [make file support ](https://www.gnu.org/software/make/) | GPL3        |

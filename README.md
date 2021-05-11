@@ -1,5 +1,5 @@
 # TakeCharge Website Documentations
-[logo here](./imgs/logo.png)
+![logo here](./imgs/logo.png)
 
 ## Specification
   This project builds the TakeCharge website complete with: php-server, mySql, php my admin, and wordpress.

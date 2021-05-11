@@ -1,0 +1,66 @@
+version: "3"
+services:
+    php-apache:
+      build: ./php-server.Dockerfile
+      depends_on:
+        - "mysqldb"
+      ports:
+        - 80:80
+        - 443:443
+      volumes:
+        - ./word-press/:/var/www/html
+      environment:
+        MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+        MYSQL_USER: ${USER_NAME}
+        MYSQL_PASSWORD: ${USER_PWD}
+      links:
+        - 'mysqldb:database'
+
+    phpmyadmin:
+      image: phpmyadmin
+      depends_on:
+        - "mysqldb"
+      restart: always
+      ports:
+          - 8080:80
+      environment:
+        MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+        MYSQL_USER: ${USER_NAME}
+        MYSQL_PASSWORD: ${USER_PWD}
+        PMA_HOST: database
+      links:
+        - 'mysqldb:database'
+
+    wordpress:
+      image: wordpress
+      depends_on:
+        - "mysqldb"
+      restart: always
+      ports:
+        - 8000:80
+      environment:
+        WORDPRESS_DB_HOST: database
+        WORDPRESS_DB_USER: root
+        WORDPRESS_DB_PASSWORD: ${ROOT_PWD}
+        WORDPRESS_DB_NAME: 'db'
+      volumes:
+        - ./word-press:/var/www/html
+      links:
+        - 'mysqldb:database'
+
+    mysqldb:
+      image: mysql:latest
+      volumes:
+          - db-vol:/var/lib/mysql
+      environment:
+        TZ: "Europe/Rome"
+        MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+        MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+        MYSQL_USER: ${USER_NAME}
+        MYSQL_PASSWORD: ${USER_PWD}
+        MYSQL_DATABASE: 'db'
+
+volumes:
+  db-vol:
+  wordpress:
+

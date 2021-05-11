@@ -1,0 +1,8 @@
+# Backups
+*.tar.gz
+
+# Error Output Files
+*errors.txt
+
+# Log files
+*.log

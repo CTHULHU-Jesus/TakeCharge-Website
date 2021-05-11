@@ -18,12 +18,12 @@ $ cd lamps
 $ make up
 ```
 By default the containers opened are:
-| container  | url                                                  |
-| ---------- | ---------------------------------------------------- |
-| php-apache | [localhost:80](localhost:80)                         |
-| wordpress  | [localhost:8000/wp-admin/](localhost:8000/wp-admin/) |
-| phpMyAdmin | [localhost:8080](localhost:8080)                     |
-| mySql      | `use phpMyAdmin for web access`                      |
+| container  | url                                                         |
+| ---------- | ----------------------------------------------------------- |
+| php-apache | [localhost:80](http://localhost:80)                         |
+| wordpress  | [localhost:8000/wp-admin/](http://localhost:8000/wp-admin/) |
+| phpMyAdmin | [localhost:8080](http://localhost:8080)                     |
+| mySql      | `use phpMyAdmin for web access`                             |
 
 	xdg-open http://localhost:8000/wp-admin/
 

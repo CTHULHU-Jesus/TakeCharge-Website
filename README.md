@@ -56,10 +56,18 @@ $ @TODO this
 @TODO decide and finalize how I want the website layed out.
 
 ## Known bugs
-  None yet!!
+None yet!!
 
 ## Credits and acknowledgements
 
-| Persson             | Position                                                |
-|:-------------------:|:-------------------------------------------------------:|
-| Matthew I. Bartlett | Heaven Defying God Killing Sky Squid of Great Calamines |
+| Person              | Contribution                                       | 
+|:-------------------:|:--------------------------------------------------:|
+| Matthew I. Bartlett | Main developer                                     |
+
+| Software         | Use                                                | Licence     |
+|:----------------:|:--------------------------------------------------:|:-----------:|
+| Docker           | Create containers that run code                    | Apache v2.0 |
+| phpMyAdmin image | [docker file](https://hub.docker.com/_/phpmyadmin) | GPL3        |
+| php-apache image | [docker file](https://hub.docker.com/_/php)        | [Custom](https://www.php.net/license/) |
+| Wordpress image  | [docker file](https://hub.docker.com/_/wordpress)  | @TODO       |
+| MySql image      | [docker file](https://hub.docker.com/_/mysql)      | [Custom](https://www.mysql.com/about/legal/) |

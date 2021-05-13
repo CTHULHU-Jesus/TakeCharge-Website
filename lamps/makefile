@@ -1,3 +1,9 @@
+links_message= \
+"Links ready: \n\
+site       : http://localhost:80 \n\
+wordpress  : http://localhost:80/wp-admin/ \n\
+phpmyadmin : http://localhost:8080"
+		
 
 all: 
 
@@ -8,6 +14,7 @@ build:
 
 up: 
 	docker-compose --env-file env up -d
+	@echo $(links_message)
 
 down:
 	docker-compose --env-file env down 

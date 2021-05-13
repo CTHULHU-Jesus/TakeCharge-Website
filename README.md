@@ -74,4 +74,3 @@ None yet!!
 | MySql image      | [docker file](https://hub.docker.com/_/mysql)            | [Custom](https://www.mysql.com/about/legal/) |
 | GNU make         | [make file support ](https://www.gnu.org/software/make/) | GPL3        |
 | PHP              | PHP language support                                     | [Custom](https://en.wikipedia.org/wiki/PHP_License) |
-@TODO compleate the rest of this table for js css and scss

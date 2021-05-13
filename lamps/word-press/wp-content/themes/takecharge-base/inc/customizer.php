@@ -56,6 +56,6 @@ function takecharge_base_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function takecharge_base_customize_preview_js() {
-	wp_enqueue_script( 'takecharge-base-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'takecharge-base-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), TAKECHARGE_BASE_VERSION, true );
 }
 add_action( 'customize_preview_init', 'takecharge_base_customize_preview_js' );

@@ -3,7 +3,7 @@ all: style.css style-rtl.css
 
 
 style.css: $(shell find sass -type f)
-	npm run compile:css
+	sass sass/style.scss
 
 style-rtl.css: style.css
 	npm run compile:rtl 
@@ -11,14 +11,13 @@ style-rtl.css: style.css
 
 .PHONY: checker sr
 
-sr:
-	find . -type f -name "*" -exec sed -i -e 's/\'_s\'/\'takecharge-base\'/g' {} +
-
+# checks all PHP files against PHP Coding Standards.
+# checks all PHP files for syntax errors.
+# checks all SASS files against CSS Coding Standards.
+# checks all JavaScript files against JavaScript Coding Standards.
 checker:
-	composer lint:wpcs   	# checks all PHP files against PHP Coding Standards.
-	composer lint:php 	 	# checks all PHP files for syntax errors.
-	npm run lint:scss 		# checks all SASS files against CSS Coding Standards.
-	npm run lint:js       # checks all JavaScript files against JavaScript Coding Standards.
+	@- { composer lint:wpcs; composer lint:php; npm run lint:scss; npm run lint:js;} > /tmp/errors.txt
+	less /tmp/errors.txt
 
 # Used for localization I think
 # composer make-pot 		# generates a .pot file in the languages/ directory.

@@ -1,0 +1,39 @@
+
+// Constants
+$primary       :#FF851A;
+$secondary     :#82ECFC;
+$secondaryDark :#0FA7FF;
+$white         :#FFFFFF;
+$lightGrey     :#F0F0F0;
+$darkGrey      :#D0D0D0;
+$textWhite     :#FFFFFF;
+$textBlack     :#000000;
+
+
+body {
+  min-height:100%;
+}
+
+.banner{
+  max-width:1920px;
+  min-width:100%;
+  height:540px;
+  background: url(images/BigBanner.png);
+  background-color: $primary;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+.main_body {
+  background: url(images/lines.png),
+              linear-gradient($white 25%, $secondary);
+  background-size: 25%, auto;
+  min-height:100%;
+  min-width:100%;
+}
+
+a {
+  color: black;
+}
+

@@ -7,11 +7,14 @@ phpmyadmin : http://localhost:8080"
 
 all: 
 
-.PHONY: up build down wordpress
-	
-build: 
-	docker-compose --env-file env build 
+.PHONY: up down wordpress install
 
+install:
+	@ echo "Installing theme"
+	@ cd theme; \
+	make install > /dev/null
+	@ echo "Installed theme"
+	
 up: 
 	docker-compose --env-file env up -d
 	@echo $(links_message)

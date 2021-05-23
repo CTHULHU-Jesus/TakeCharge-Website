@@ -10,6 +10,11 @@
 ## Installation instructions
   Install [make](https://www.gnu.org/software/make/), [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/).
   This website may not run on all architectures (depends on what the docker images run on), This needs more research.
+```
+$ cd lamps
+$ make install
+```
+
 ## Operating instructions
 
 ### Run Website
@@ -74,3 +79,4 @@ None yet!!
 | MySql image      | [docker file](https://hub.docker.com/_/mysql)            | [Custom](https://www.mysql.com/about/legal/) |
 | GNU make         | [make file support ](https://www.gnu.org/software/make/) | GPL3        |
 | PHP              | PHP language support                                     | [Custom](https://en.wikipedia.org/wiki/PHP_License) |
+| SCSSPHP Library  | Use Wordpress to modify some SCSS file to give the theme options | MIT |

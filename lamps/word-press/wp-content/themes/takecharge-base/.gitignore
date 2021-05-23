@@ -1,5 +1,5 @@
-node_modules/
-*.lock
-vendor/
-.sass-cache/
-style.css.map
+*.css
+*.css.map
+.sass-cache
+scssphp
+
